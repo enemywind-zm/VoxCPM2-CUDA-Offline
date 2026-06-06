@@ -3243,6 +3243,27 @@ wheels = [
 ]
 
 [[package]]
+name = "torchcodec"
+version = "0.13.0"
+source = { registry = "https://mirrors.aliyun.com/pypi/simple" }
+wheels = [
+    { url = "https://mirrors.aliyun.com/pypi/packages/ee/4b/20dffb4aac1579aeac2c3f7c23daa7159cb48f301a4e8e72d647d1872605/torchcodec-0.13.0-cp310-cp310-manylinux_2_28_aarch64.whl", hash = "sha256:25cb40770b8952c4fe1e8f8b2f476efbea76a4f79830ee513835e213b44a07a4" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/c0/ef/313c6dfeb6592e05d2ee20a781dad6132db904331042527e72ec9e5277fb/torchcodec-0.13.0-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:f88233f446a156f6bf5898700c640a1b1da558378df09b2bc56b006eb890745c" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/bb/fb/9724c1a3ebd21d850c033b75b50d95fbabfcd00063678bb5ad6e18e5ff19/torchcodec-0.13.0-cp311-cp311-manylinux_2_28_aarch64.whl", hash = "sha256:07e7c95485ced310d530549d9e2aaeb9edbbb62aca274ef0120c3d42b9bf9a87" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/79/30/fb8e29d77551240de0eb480d2c5e25072d55389425f0f17a5126c2d545ca/torchcodec-0.13.0-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:f9e31ceafdfda8d001890d94bdc57fe449c2a3c5c08cd4285e1d2408402bb468" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/2e/f7/641126886e21b8755eef54b2a34c6a3a98be6dd746563f1d0dc56e2fb3a6/torchcodec-0.13.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:9e59c6be489aa5853a189b17da7e4f897d51a7040d9a5235b023648c01fb0f74" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/1b/cf/3483a531c30611513dcc141f7c73a0cbcc7f545054429f4212a56755c930/torchcodec-0.13.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:5b8b905b60debc1d8e021c8ab30f2cdc3ce140c26308ebd0fcafe3457469a7a1" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/0b/3a/a973dc5e9e12d841270fba40d3df697646fd34e4e7385121c1ac72b75a04/torchcodec-0.13.0-cp313-cp313-manylinux_2_28_aarch64.whl", hash = "sha256:1d9989504fe5de0b9bdb7b5da9737c0f1c1a7ad3532af7a17bd331c27f585e17" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/a8/d7/66fc01fd50b17bca247507f45f50da08517642e9fe2524d9533819ac6df5/torchcodec-0.13.0-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:ffa5d542363287043343f3e613355c1c4cc855219418fb319f15345294be910c" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/cb/00/37316406298589120395d7fc44c8ffda2edaad63ed8e410ed8c33c57922c/torchcodec-0.13.0-cp313-cp313t-manylinux_2_28_aarch64.whl", hash = "sha256:f9887397d778da2cbf546e64aba87cdbbce73ca825c6b03217b93fa8bfe2f1d8" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/9d/34/d219959a2a19aa5461aa853c1d0e80a5ee8e2c3b13f40881ba2b6d4a4a5b/torchcodec-0.13.0-cp313-cp313t-manylinux_2_28_x86_64.whl", hash = "sha256:b745aff148e91c83443ee50f3b587f9bf805ee790225aeefcb89ffaf0dbe241c" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/9d/2b/5513969bde6aaa0432e60390deebf5baf70c4978e91369c1f9ef571b4361/torchcodec-0.13.0-cp314-cp314-manylinux_2_28_aarch64.whl", hash = "sha256:4d81c021d332e9dfdec7d31781737ab19ed7478bfca7b9ec322cb0130807cf5a" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/f3/97/bb983d261702204417c3cf730cbc259a6277724ea2561247ce73306521c7/torchcodec-0.13.0-cp314-cp314-manylinux_2_28_x86_64.whl", hash = "sha256:7b65294d46345c8d7709fcae6f3a5141239f4004a89b08b7ee10cf36c70f712e" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/5a/17/d5f4374fb04634b779c764b81fd43fa8ce52305bf1fb74465f04b2d8d391/torchcodec-0.13.0-cp314-cp314t-manylinux_2_28_aarch64.whl", hash = "sha256:b53c81337f4d180c3b09411e5c66f7727f063fbb5a306a780a5a47287f2ecaf3" },
+    { url = "https://mirrors.aliyun.com/pypi/packages/84/e4/fc23b647bbd60fafba825fad3007eea8504666967d0ae721a887d3720f75/torchcodec-0.13.0-cp314-cp314t-manylinux_2_28_x86_64.whl", hash = "sha256:07bd6a023328ed8cfc17b5158b90b0f0556c8aaea027576ec4c6097d903493e2" },
+]
+
+[[package]]
 name = "tqdm"
 version = "4.67.3"
 source = { registry = "https://mirrors.aliyun.com/pypi/simple" }
@@ -3422,6 +3443,7 @@ dependencies = [
     { name = "soundfile", marker = "sys_platform == 'linux'" },
     { name = "torch", marker = "sys_platform == 'linux'" },
     { name = "torchaudio", marker = "sys_platform == 'linux'" },
+    { name = "torchcodec", marker = "sys_platform == 'linux'" },
     { name = "tqdm", marker = "sys_platform == 'linux'" },
     { name = "transformers", marker = "sys_platform == 'linux'" },
     { name = "wetext", marker = "sys_platform == 'linux'" },
@@ -3458,6 +3480,7 @@ requires-dist = [
     { name = "soundfile" },
     { name = "torch", specifier = ">=2.5.0" },
     { name = "torchaudio", specifier = ">=2.5.0" },
+    { name = "torchcodec", specifier = ">=0.13.0" },
     { name = "tqdm" },
     { name = "transformers", specifier = ">=4.36.2" },
     { name = "wetext" },
