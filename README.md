@@ -8,7 +8,7 @@
 All training, LoRA, and network-dependent features have been removed to guarantee maximum stability, minimum dependencies, and full support for completely isolated environments.
 
 ## ✨ Key Features
-- **Pure Offline Mode**: All models (VoxCPM2, SenseVoiceSmall, ZipEnhancer) are loaded directly from the local `./model/` directory. Zero runtime network requests.
+- **Pure Offline Mode**: All models (VoxCPM2, SenseVoiceSmall, ZipEnhancer) are loaded directly from the local `./models/` directory. Zero runtime network requests.
 - **Zero Redundancy**: Removed all training scripts, legacy model compatibility logic, and unused dependencies.
 - **WebUI Driven**: Simple, out-of-the-box Gradio interface for quick Voice Cloning and Text-to-Speech generation.
 - **Linux/CUDA Exclusive**: Stripped of macOS (MPS) and CPU fallbacks to ensure maximum performance purely on NVIDIA GPUs.
@@ -26,10 +26,10 @@ source .venv/bin/activate
 uv sync
 ```
 
-*Note: You MUST place your downloaded model weights into the `./model/` directory before running the engine. The required paths are:*
-- `./model/OpenBMB/VoxCPM2`
-- `./model/iic/SenseVoiceSmall`
-- `./model/iic/speech_zipenhancer_ans_multiloss_16k_base`
+*Note: You MUST place your downloaded model weights into the `./models/` directory before running the engine. The required paths are:*
+- `./models/OpenBMB/VoxCPM2`
+- `./models/iic/SenseVoiceSmall`
+- `./models/iic/speech_zipenhancer_ans_multiloss_16k_base`
 
 ## 🎮 Running the WebUI
 

@@ -38,7 +38,9 @@ dependencies = [
     "soundfile",
     "librosa",
     "funasr",
-    "safetensors"
+    "safetensors",
+    "addict>=2.4.0",
+    "datasets>=4.8.5",
 ]
 
 [project.optional-dependencies]

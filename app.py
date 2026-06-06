@@ -9,7 +9,8 @@ from funasr import AutoModel
 from pathlib import Path
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
-
+os.environ["NO_PROXY"] = "localhost,127.0.0.1,0.0.0.0"
+os.environ["no_proxy"] = "localhost,127.0.0.1,0.0.0.0"
 import voxcpm
 from voxcpm.model.utils import resolve_runtime_device
 
@@ -221,7 +222,7 @@ _APP_THEME = gr.themes.Soft(
 
 
 # ---------- Downloader ----------
-def prepare_all_models(voxcpm_id: str, zip_id: str, asr_id: str, cache_dir: str = "./model"):
+def prepare_all_models(voxcpm_id: str, zip_id: str, asr_id: str, cache_dir: str = "./models"):
     from modelscope.hub.snapshot_download import snapshot_download
     logger.info("Checking and pre-downloading all required models to local folder...")
     vox_path = snapshot_download(voxcpm_id, cache_dir=cache_dir)
