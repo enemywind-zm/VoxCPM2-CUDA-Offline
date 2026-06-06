@@ -42,6 +42,7 @@ dependencies = [
     "addict>=2.4.0",
     "datasets>=4.8.5",
     "simplejson>=4.1.1",
+    "sortedcontainers>=2.4.0",
 ]
 
 [project.optional-dependencies]
