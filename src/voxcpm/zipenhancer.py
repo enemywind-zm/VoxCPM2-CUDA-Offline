@@ -60,8 +60,22 @@ class ZipEnhancer:
             with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp_file:
                 output_path = tmp_file.name
         try:
+            # Sanitize the audio file using torchaudio before passing to modelscope
+            # This fixes issues where soundfile fails to parse BytesIO of certain files
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as clean_tmp:
+                clean_path = clean_tmp.name
+            audio, sr = torchaudio.load(input_path)
+            torchaudio.save(clean_path, audio, sr, format="wav")
+            
             # Perform denoising processing
-            self._pipeline(input_path, output_path=output_path)
+            self._pipeline(clean_path, output_path=output_path)
+            
+            # Clean up the intermediate sanitized file
+            try:
+                os.unlink(clean_path)
+            except OSError:
+                pass
+            
             # Loudness normalization
             if normalize_loudness:
                 self._normalize_loudness(output_path)
