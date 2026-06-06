@@ -236,8 +236,11 @@ class VoxCPMDemo:
     def __init__(self, model_id: str = "OpenBMB/VoxCPM2", device: str = "auto") -> None:
         self.device = resolve_runtime_device(device, "cuda")
         logger.info(f"Running VoxCPM on device: {self.device}")
-        # Disable torch.compile because the environment lacks the nvcc/gcc compiler
-        self.optimize = False
+        import os
+        os.environ["CC"] = "/usr/bin/gcc"
+        os.environ["CXX"] = "/usr/bin/g++"
+        # Enable torch.compile for faster inference
+        self.optimize = True
 
         self.asr_model_id = "iic/SenseVoiceSmall"
         self.zip_model_id = "iic/speech_zipenhancer_ans_multiloss_16k_base"
