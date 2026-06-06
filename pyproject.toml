@@ -41,6 +41,7 @@ dependencies = [
     "safetensors",
     "addict>=2.4.0",
     "datasets>=4.8.5",
+    "simplejson>=4.1.1",
 ]
 
 [project.optional-dependencies]
