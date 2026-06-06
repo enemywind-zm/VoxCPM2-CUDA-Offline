@@ -60,12 +60,20 @@ class ZipEnhancer:
             with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp_file:
                 output_path = tmp_file.name
         try:
-            # Sanitize the audio file using torchaudio before passing to modelscope
+            # Sanitize the audio file using ffmpeg before passing to modelscope
             # This fixes issues where soundfile fails to parse BytesIO of certain files
+            # and avoids torchaudio 'torchcodec' missing errors.
+            import subprocess
             with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as clean_tmp:
                 clean_path = clean_tmp.name
-            audio, sr = torchaudio.load(input_path)
-            torchaudio.save(clean_path, audio, sr, format="wav")
+            
+            # Use ffmpeg to decode and resample to 16kHz (which zipenhancer expects)
+            subprocess.run(
+                ["ffmpeg", "-y", "-i", input_path, "-ac", "1", "-ar", "16000", clean_path],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                check=True
+            )
             
             # Perform denoising processing
             self._pipeline(clean_path, output_path=output_path)
